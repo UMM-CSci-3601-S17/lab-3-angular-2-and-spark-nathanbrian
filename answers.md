@@ -13,4 +13,7 @@ A: Angular2, Yarn, TypeScript, and Bootstrap. Angular2 is a framework for CSS an
    are for.
    
 Q: How does the navbar work in this project? Is our SparkJava server the only thing doing routing?
-A: 
+A: The navbar is its own html file that angular manages somehow. No the SparkJava server is not doing the only routing 
+Angular2 has its own routing system that routes different apps to different pages within the file folder. 
+
+
