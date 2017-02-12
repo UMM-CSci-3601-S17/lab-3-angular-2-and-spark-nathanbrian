@@ -17,3 +17,5 @@ A: The navbar is its own html file that angular manages somehow. No the SparkJav
 Angular2 has its own routing system that routes different apps to different pages within the file folder. 
 
 
+
+
