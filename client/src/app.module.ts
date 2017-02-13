@@ -10,6 +10,7 @@ import { UserListComponent } from './app/users/user-list.component';
 import { routing } from './app/app.routes';
 import {FormsModule} from '@angular/forms';
 import {FilterBy} from './app/users/filter.pipe';
+import { TodoListComponent } from './app/todos/todo-list.component';
 
 @NgModule({
     imports: [
@@ -25,6 +26,7 @@ import {FilterBy} from './app/users/filter.pipe';
         HomeComponent,
         NavbarComponent,
         UserListComponent,
+        TodoListComponent,
         FilterBy
     ],
     bootstrap: [ AppComponent ]
