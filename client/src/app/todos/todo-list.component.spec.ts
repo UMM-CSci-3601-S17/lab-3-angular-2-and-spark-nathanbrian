@@ -19,34 +19,32 @@ describe("Todo list", () => {
         todoListServiceStub = {
             getTodos: () => Observable.of([
                 {
-                    id: "chris_id",
+                    _id: "chris_id",
                     status: true,
                     owner: "Chris",
                     body: "this is chris's body",
                     category: "coloring"
                 },
                 {
-                    id: "pat_id",
+                    _id: "pat_id",
                     status: false,
-                    owner: "Pat"
-                    body: "this is pat's body"
+                    owner: "Pat",
+                    body: "this is pat's body",
                     category: "texting"
                 },
-                },
                 {
-                    id: "jamie_id",
+                    _id: "jamie_id",
                     status: true,
-                    owner: "Jamie"
-                    body: "this is jamie's body"
+                    owner: "Jamie",
+                    body: "this is jamie's body",
                     category: "coloring"
                 },
                 {
-                    id: "brady_id",
+                    _id: "brady_id",
                     status: true,
-                    owner: "Brady"
-                    body: "this is brady's body"
+                    owner: "Brady",
+                    body: "this is brady's body",
                     category: "fixing"
-                },
                 }
                 ])
         };
@@ -63,13 +61,13 @@ describe("Todo list", () => {
     beforeEach(async(() => {
         TestBed.compileComponents().then(() => {
             fixture = TestBed.createComponent(TodoListComponent);
-            userList = fixture.componentInstance;
+            todoList = fixture.componentInstance;
             fixture.detectChanges();
         });
     }));
 
     it("contains all the todos", () => {
-        expect(userList.todos.length).toBe(4);
+        expect(todoList.todos.length).toBe(4);
     });
 
     it("contains an owner of todo named 'Chris'", () => {
@@ -84,7 +82,7 @@ describe("Todo list", () => {
         expect(todoList.todos.some((todo: Todo) => todo.owner === "Santa" )).toBe(false);
     });
 
-    it("has two todos with a coloring category, () => {
+    it("has two todos with a coloring category", () => {
         expect(todoList.todos.filter((todo: Todo) => todo.category === "coloring").length).toBe(2);
     });
 

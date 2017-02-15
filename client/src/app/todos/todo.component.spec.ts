@@ -19,34 +19,32 @@ describe("Todo component", () => {
         todoListServiceStub = {
             getTodoById: (todoId: string) => Observable.of([
                 {
-                    id: "chris_id",
+                    _id: "chris_id",
                     status: true,
                     owner: "chris",
                     body: "this is chris's body",
                     category: "coloring"
                 },
                 {
-                    id: "pat_id",
+                    _id: "pat_id",
                     status: false,
-                    owner: "pat"
-                    body: "this is pat's body"
+                    owner: "pat",
+                    body: "this is pat's body",
                     category: "texting"
                 },
-                },
                 {
-                    id: "jamie_id",
+                    _id: "jamie_id",
                     status: true,
-                    owner: "jamie"
-                    body: "this is jamie's body"
+                    owner: "jamie",
+                    body: "this is jamie's body",
                     category: "coloring"
                 },
                 {
-                    id: "brady_id",
+                    _id: "brady_id",
                     status: true,
-                    owner: "brady"
-                    body: "this is brady's body"
+                    owner: "brady",
+                    body: "this is brady's body",
                     category: "fixing"
-                },
                 }
             ].find(todo => todo._id === todoId))
         };
@@ -68,8 +66,8 @@ describe("Todo component", () => {
     it("can retrieve Pat by ID", () => {
         todoComponent.setId("pat_id");
         expect(todoComponent.todo).toBeDefined();
-        expect(userComponent.todo.owner).toBe("Pat");
-        expect(userComponent.todo.category).toBe("texting");
+        expect(todoComponent.todo.owner).toBe("Pat");
+        expect(todoComponent.todo.category).toBe("texting");
     });
 
     it("returns undefined for Santa", () => {

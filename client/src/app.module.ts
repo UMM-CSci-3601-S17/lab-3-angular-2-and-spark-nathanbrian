@@ -9,7 +9,6 @@ import { KittensComponent }   from './app/kittens/kittens.component';
 import { UserListComponent } from './app/users/user-list.component';
 import { UserListService } from './app/users/user-list.service';
 import { routing } from './app/app.routes';
-import { FormsModule } from '@angular/forms';
 
 import { PipeModule } from './pipe.module';
 import {FormsModule} from '@angular/forms';

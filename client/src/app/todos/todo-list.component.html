@@ -1,9 +1,13 @@
 <ul class="list-group">
     <li class="list-group-item list-group-item-info">
-        <input #input type="text" placeholder="ID" [(ngModel)]="searchID">
-        <input #input type="text" placeholder="Owner" [(ngModel)]="searchOwner">
-        <input #input type="text" placeholder="Body" [(ngModel)]="searchBody">
-        <input #input type="text" placeholder="Category" [(ngModel)]="searchCategory">
+        <!--<input #input type="text" placeholder="ID" [(ngModel)]="searchID">-->
+        <!--<input #input type="text" placeholder="Owner" [(ngModel)]="searchOwner">-->
+        <!--<input #input type="text" placeholder="Body" [(ngModel)]="searchBody">-->
+        <!--<input #input type="text" placeholder="Category" [(ngModel)]="searchCategory">-->
+        <input #input type="text" placeholder="Filter by ID" (input)="searchID= $event.target.value">
+        <input #input type="text" placeholder="Filter by Owner" (input)="searchOwner= $event.target.value">
+        <input #input type="text" placeholder="Filter by Body" (input)="searchBody= $event.target.value">
+        <input #input type="text" placeholder="Filter by Category" (input)="searchCategory = $event.target.value">
         <p>Status:
         <select #input  [(ngModel)]="searchStatus">
             <option value = 0 >Incomplete</option>
@@ -21,7 +25,7 @@
 
     </li>
     <li class="list-group-item list-group-item-info">Todos</li>
-    <li *ngFor="let todo of todos | async | filterBy: {_id: searchID} | filterBy: {owner: searchOwner}| filterBy:{body: searchBody}|
+    <li *ngFor="let todo of todos | filterBy: {_id: searchID} | filterBy: {owner: searchOwner}| filterBy:{body: searchBody}|
      filterBy:{category: searchCategory} | filterBy:{status: searchStatus}" class="list-group-item">
         Owner: {{ todo.owner }} <br/>
         Body: {{ todo.body }} <br/>

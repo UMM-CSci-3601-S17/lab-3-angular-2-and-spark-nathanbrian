@@ -10,7 +10,7 @@ export class TodoComponent implements OnInit {
     public todo: Todo = null;
     private id: string;
 
-    constructor(private toodListService: TodoListService) {
+    constructor(private todoListService: TodoListService) {
         // this.users = this.userListService.getUsers();
     }
 
