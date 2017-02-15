@@ -15,6 +15,8 @@ import { PipeModule } from './pipe.module';
 import {FormsModule} from '@angular/forms';
 import {FilterBy} from './app/users/filter.pipe';
 import { TodoListComponent } from './app/todos/todo-list.component';
+import { TodoListService } from './app/todos/todo-list.service';
+
 
 @NgModule({
     imports: [
@@ -33,9 +35,8 @@ import { TodoListComponent } from './app/todos/todo-list.component';
         UserListComponent,
         TodoListComponent,
         FilterBy
-        UserListComponent
     ],
-    providers: [ UserListService ],
+    providers: [ UserListService, TodoListService ],
     bootstrap: [ AppComponent ]
 })
 
