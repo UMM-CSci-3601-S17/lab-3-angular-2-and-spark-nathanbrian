@@ -10,18 +10,11 @@
         <input #input type="text" placeholder="Filter by Category" (input)="searchCategory = $event.target.value">
         <p>Status:
         <select #input  [(ngModel)]="searchStatus">
+            <option value = ""></option>
             <option value = 0 >Incomplete</option>
             <option value = 1>Complete</option>
         </select>
         </p>
-        <p>Sort by:
-        <select #input >
-            <option value = ""></option>
-            <option value="owner">Owner</option>
-            <option value = "body">Body</option>
-            <option value = "status">Status</option>
-            <option value = "category">Category</option>
-        </select></p>
 
     </li>
     <li class="list-group-item list-group-item-info">Todos</li>
