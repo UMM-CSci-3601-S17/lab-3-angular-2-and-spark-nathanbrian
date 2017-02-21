@@ -11,8 +11,8 @@
         <p>Status:
         <select #input  (input) = "searchStatus= $event.target.value">
             <option value = ""></option>
-            <option value = 0 >Incomplete</option>
             <option value = 1>Complete</option>
+            <option value = 0>Incomplete</option>
         </select>
         </p>
 
@@ -24,6 +24,6 @@
         Body: {{ todo.body }} <br/>
         Category: {{ todo.category }} <br/>
         ID: {{ todo._id }} <br/>
-        Status: {{ todo.status }}
+        Status: {{todo.status ? "Complete" : "Incomplete"}}
     </li>
 </ul>

@@ -68,6 +68,15 @@ describe("Todo component", () => {
         expect(todoComponent.todo).toBeDefined();
         expect(todoComponent.todo.owner).toBe("Pat");
         expect(todoComponent.todo.category).toBe("texting");
+        expect(todoComponent.todo.status).toBe(false);
+    });
+
+    it("can retrieve Brady by ID", () => {
+        todoComponent.setId("brady_id");
+        expect(todoComponent.todo).toBeDefined();
+        expect(todoComponent.todo.owner).toBe("Brady");
+        expect(todoComponent.todo.category).toBe("fixing");
+        expect(todoComponent.todo.status).toBe(true);
     });
 
     it("returns undefined for Santa", () => {
