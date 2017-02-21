@@ -9,7 +9,7 @@
         <input #input type="text" placeholder="Filter by Body" (input)="searchBody= $event.target.value">
         <input #input type="text" placeholder="Filter by Category" (input)="searchCategory = $event.target.value">
         <p>Status:
-        <select #input  [(ngModel)]="searchStatus">
+        <select #input  (input) = "searchStatus= $event.target.value">
             <option value = ""></option>
             <option value = 0 >Incomplete</option>
             <option value = 1>Complete</option>
