@@ -21,28 +21,28 @@ describe("Todo component", () => {
                 {
                     _id: "chris_id",
                     status: true,
-                    owner: "chris",
+                    owner: "Chris",
                     body: "this is chris's body",
                     category: "coloring"
                 },
                 {
                     _id: "pat_id",
                     status: false,
-                    owner: "pat",
+                    owner: "Pat",
                     body: "this is pat's body",
                     category: "texting"
                 },
                 {
                     _id: "jamie_id",
                     status: true,
-                    owner: "jamie",
+                    owner: "Jamie",
                     body: "this is jamie's body",
                     category: "coloring"
                 },
                 {
                     _id: "brady_id",
                     status: true,
-                    owner: "brady",
+                    owner: "Brady",
                     body: "this is brady's body",
                     category: "fixing"
                 }
