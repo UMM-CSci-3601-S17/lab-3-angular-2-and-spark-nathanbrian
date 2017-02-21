@@ -86,4 +86,14 @@ describe("Todo list", () => {
         expect(todoList.todos.filter((todo: Todo) => todo.category === "coloring").length).toBe(2);
     });
 
+    it("contains 'is' in the second spot of the fake todos body", () => {
+        expect(todoList.todos.filter((todo: Todo) => todo.body[1])).toBe("is");
+    });
+
+    it("has three todos with a complete or true status ", () => {
+        expect(todoList.todos.filter((todo: Todo) => todo.status === true).length).toBe(3);
+    });
+
+
+
 });
